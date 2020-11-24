@@ -1,6 +1,7 @@
 import re
 
-def arithmetic_arranger(problems, answers = False):
+
+def arithmetic_arranger(problems, answers=False):
     if len(problems) > 5:
         return "Error: Too many problems."
 
@@ -45,9 +46,10 @@ def arithmetic_arranger(problems, answers = False):
             pline_two += '    '
             pline_bars += '    '
             pline_ans += '    '
-        
+
     if answers:
-        arranged_problems = pline_one + '\n' + pline_two + '\n' + pline_bars + '\n' + pline_ans
+        arranged_problems = (pline_one + '\n' + pline_two
+                             + '\n' + pline_bars + '\n' + pline_ans)
     else:
         arranged_problems = pline_one + '\n' + pline_two + '\n' + pline_bars
 
