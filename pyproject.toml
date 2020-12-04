@@ -1,10 +1,20 @@
 [tool]
+
 [tool.poetry]
+
 authors = ["Jeremy A Gray <jeremy.a.gray@gmail.com>"]
 description = "FCC SC Arithmetic Arranger Project"
 name = "fcc-sc-arithmetic-arranger"
 version = "0.1.0"
+
 [tool.poetry.dependencies]
-python = "^3.7"
+
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+black = { version = "*", allow-prereleases = true }
 pytest = "^6.1"
+pytest-black = "^0.3"
+pytest-cov = "^2.10"
 pytest-flake8 = "^1.0"
