@@ -2,10 +2,7 @@ def arithmetic_arranger(problems, answers=False):
     if len(problems) > 5:
         return "Error: Too many problems."
 
-    line_one = ""
-    line_two = ""
-    line_bars = ""
-    line_ans = ""
+    lines = [[], [], [], []]
 
     for index, problem in enumerate(problems):
         # Split the problem.
@@ -30,22 +27,14 @@ def arithmetic_arranger(problems, answers=False):
         elif op == "-":
             ans = int(one) - int(two)
 
-        line_one += "  " + str(one).rjust(length, " ")
-        line_two += op + " " + str(two).rjust(length, " ")
-        line_bars += "-".rjust(length + 2, "-")
-        line_ans += str(ans).rjust(length + 2, " ")
-
-        if (index + 1) < len(problems):
-            line_one += "    "
-            line_two += "    "
-            line_bars += "    "
-            line_ans += "    "
+        lines[0].append("  " + str(one).rjust(length, " "))
+        lines[1].append(op + " " + str(two).rjust(length, " "))
+        lines[2].append("-".rjust(length + 2, "-"))
+        lines[3].append(str(ans).rjust(length + 2, " "))
 
     if answers:
-        arranged_problems = (
-            line_one + "\n" + line_two + "\n" + line_bars + "\n" + line_ans
-        )
+        num = 4
     else:
-        arranged_problems = line_one + "\n" + line_two + "\n" + line_bars
+        num = 3
 
-    return arranged_problems
+    return "\n".join(map(lambda line: "    ".join(line), lines[0:num]))
