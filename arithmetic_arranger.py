@@ -1,3 +1,13 @@
+# ******************************************************************************
+#
+# fcc-sc-arithmetic-arrangeer
+#
+# Copyright 2020-2024 Jeremy A Gray <gray@flyquackswim.com>.
+#
+# All rights reserved.
+#
+# ******************************************************************************
+
 def arithmetic_arranger(problems, answers=False):
     if len(problems) > 5:
         return "Error: Too many problems."

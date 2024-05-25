@@ -1,4 +1,12 @@
-#!/usr/bin/env python
+# ******************************************************************************
+#
+# fcc-sc-arithmetic-arrangeer
+#
+# Copyright 2020-2024 Jeremy A Gray <gray@flyquackswim.com>.
+#
+# All rights reserved.
+#
+# ******************************************************************************
 
 from arithmetic_arranger import arithmetic_arranger
 
