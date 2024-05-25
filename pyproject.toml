@@ -1,3 +1,13 @@
+# ******************************************************************************
+#
+# fcc-sc-arithmetic-arrangeer
+#
+# Copyright 2020-2024 Jeremy A Gray <gray@flyquackswim.com>.
+#
+# All rights reserved.
+#
+# ******************************************************************************
+
 [tool]
 
 [tool.isort]
@@ -9,6 +19,42 @@ line_length = 88
 multi_line_output = 3
 use_parentheses = true
 
+[tool.pccc]
+
+header_length = 50
+body_length = 72
+wrap = true
+force_wrap = true
+spell_check = false
+repair = false
+ignore_generated_commits = false
+
+types = [
+  "depends",
+  "doc",
+  "feat",
+  "fix",
+  "perf",
+  "refactor",
+  "release",
+  "style",
+  "test",
+]
+
+scopes = [
+  "arranger",
+  "tooling",
+]
+
+footers = [
+  "github-closes",
+  "signed-off-by",
+]
+
+required_footers = [
+  "signed-off-by",
+]
+
 [tool.poetry]
 
 authors = ["Jeremy A Gray <jeremy.a.gray@gmail.com>"]
@@ -18,14 +64,13 @@ version = "0.1.1"
 
 [tool.poetry.dependencies]
 
-python = "^3.8"
+python = ">=3.10.1,<4"
+pccc = ">=0"
 
 [tool.poetry.dev-dependencies]
 
-black = { version = "*", allow-prereleases = true }
-isort = "^5.6"
-pre-commit = "^2.9"
-pytest = "^6.1"
-pytest-black = "^0.3"
-pytest-cov = "^2.10"
-pytest-flake8 = "^1.0"
+black = ">=24"
+isort = ">=5"
+pre-commit = ">=3"
+pytest = ">=8"
+pytest-cov = ">=5"
