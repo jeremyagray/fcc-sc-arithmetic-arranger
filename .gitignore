@@ -1,7 +1,20 @@
+# ******************************************************************************
+#
+# fcc-sc-arithmetic-arrangeer
+#
+# Copyright 2020-2024 Jeremy A Gray <gray@flyquackswim.com>.
+#
+# All rights reserved.
+#
+# ******************************************************************************
+
 # Emacs.
 *~
+.dir-locals.el
 
 # Python.
 .coverage
+.tox
+.venv
 __pycache__
 htmlcov
